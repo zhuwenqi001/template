@@ -1,0 +1,15 @@
+.el-menu-item,
+.el-submenu__title,
+.el-submenu .el-menu-item {
+    height: 40px;
+    line-height: 40px;
+
+    .i-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        color: #909399;
+        margin-right: 5px;
+    }
+}
