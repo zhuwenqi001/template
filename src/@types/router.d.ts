@@ -1,4 +1,5 @@
 import { RouteConfig } from 'vue-router'
+import { Assign } from './utils'
 
 interface MetaConfig {
   // 菜单标题
@@ -21,7 +22,13 @@ interface MetaConfig {
   iframeUrl?: String
 }
 
-export interface StaticRouteOption extends RouteConfig {
+type CustomRouteConfig = {
   icon?: string
   meta?: MetaConfig
 }
+
+type TempStaticRouteOption = Assign<RouteConfig, CustomRouteConfig>
+
+type childrenOption = { children?: TempStaticRouteOption[] }
+
+export type StaticRouteOptions = Assign<TempStaticRouteOption, childrenOption>

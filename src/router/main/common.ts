@@ -1,9 +1,10 @@
-import { StaticRouteOption } from './type'
+import { StaticRouteOptions } from '@/@types/router'
 
 import Layout from '@/modules/layout/Layout.vue'
 import Nest2 from '@/modules/layout/Nest2.vue'
+
 // 基础数据路由
-const common: StaticRouteOption = {
+const common: StaticRouteOptions = {
   path: '/',
   component: Layout,
   meta: {
@@ -17,6 +18,7 @@ const common: StaticRouteOption = {
       meta: { noMe: true },
       children: [
         {
+          icon: 'fa',
           path: 'welcome',
           name: 'Welcome',
           component: () => import('@/views/common/welcome.vue'),

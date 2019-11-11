@@ -12,7 +12,9 @@ const Types = {
 }
 
 export interface State {
-  userInfo: {}
+  userInfo: {
+    [propName: string]: any
+  }
 }
 
 const state: State = {
@@ -52,5 +54,20 @@ const mutations: MutationTree<State> = {
     state.userInfo.nodeName = params.node_name
     state.userInfo.openid = params.openid
   }
+  [Types.SET_PERMISSIONS]:(state, params)=>{
+    
+  }
 }
-const actions: ActionTree<State, RootState> = {}
+const actions: ActionTree<State, RootState> = {
+  // 获取用户信息
+  async getUserInfo({ rootState, commit }) {
+    const result = await getUserInfo()
+    commit(Types.SET_USER_INFO, result)
+    if (GLOBAL.gateway) {
+    } else {
+      // set Permission
+
+      // set menu
+    }
+  }
+}
