@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store'
 
+import './permission' // permission control
+
 import '@/styles/index.scss' // 自定义样式
 
 import Global from './config/global' // 全局变量

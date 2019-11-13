@@ -1,7 +1,7 @@
 /**
  * 全局变量、系统配置。注册到vue里
  */
-const mockLocal = true // 开关本地mock,调用真实接口时需要把它关了。mock分为两类1、本地mock（mockData.js） 2、接口mock(如网关提供的mock接口)
+const mockLocal = false // 开关本地mock,调用真实接口时需要把它关了。mock分为两类1、本地mock（mockData.js） 2、接口mock(如网关提供的mock接口)
 const gateway = false // 开关网关模式
 const navOpen = false // 开关导航菜单
 const frameLen = 5 // 默认缓存iframe domain最大个数的

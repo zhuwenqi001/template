@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const debug = process.env.NODE_ENV !== 'production'
 
 // https://webpack.js.org/guides/dependency-management/#requirecontext
-const modulesFiles = require.context('./modules', true, /\.js$/)
+const modulesFiles = require.context('./modules', true, /\.ts$/)
 
 // you do not need `import app from './modules/app'`
 // it will auto require all vuex module from modules file

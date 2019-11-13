@@ -49,7 +49,6 @@ Object.keys(URL).some(env => {
     return true
   }
 })
-
 // 本地mockLocal时，为空字符串
 HostName = GLOBAL.mockLocal ? '' : HostName
 
